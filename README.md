@@ -1,11 +1,19 @@
-# Shared-Key-Capture
+## ⚠️ **Disclaimer (免责声明)**  
+This tool is **for educational/research purposes only**. It demonstrates Windows hook techniques and shared network operations.  
+**DO NOT use it for unauthorized activities.** The developer is not responsible for misuse.  
 
-## 介绍
+## 🔧 **Features**  
+- Captures keyboard input via DLL injection.  
+- Logs keystrokes to a shared network folder (`\\IP\KeyLogs`).  
+- Runs silently (no visible window).  
 
-这是一个基于 Windows 钩子技术的键盘记录程序。它利用配套的 DLL 捕获目标计算机的键盘输入，并将按键记录通过网络共享写入到配置文件（`config.txt`）中指定的远程计算机上的文件。程序以隐藏方式运行，不显示可见窗口。
+## 📝 **Usage**  
+1. On the listener machine:  
+   - Create a shared folder named `KeyLogs`.  
+   - Grant write permissions to the user running this tool.  
+2. Edit `config.txt` with the listener's IP/hostname.  
+3. Run the executable on the target machine (for testing purposes).  
 
-## **使用方法 :**
-
-1.  在监听方机器上**手动**设置一个共享文件夹，命名为 `KeyLogs`，并确保运行您程序的**用户账户**具有写入权限（参考上一个回复的步骤）。
-2.  在根文件夹的 `config.txt`中写入监听方机器的 IP 地址或主机名。
-3.  将根文件放入受害者机器中并点击exe文件让其运行，然后就可以在共享文件夹中看到对方的键盘操作
+## ⚠️ **Legal & Ethical Notice**  
+- This tool should only be used on **systems you own or have explicit permission to test**.  
+- Many jurisdictions prohibit unauthorized keylogging. **Use at your own risk**.  
